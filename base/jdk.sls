@@ -13,8 +13,8 @@
 
 jdk-file:
   file.managed:
-    - source: salt://jdk-6u33-linux-x64.bin
-    - name: /opt/software/jdk-6u33-linux-x64.bin
+    - source: salt://jdk-7u67-linux-x64.tar.gz
+    - name: /opt/software/jdk-7u67-linux-x64.tar.gz
     - include_empty: True
     - user: erp
     - group: erp
@@ -22,16 +22,16 @@ jdk-file:
 /home/erp/.bashrc:
   file.append:
     - text:
-       - export JAVA_HOME=/opt/programs/jdk1.6.0_33
+       - export JAVA_HOME=/opt/programs/jdk1.7.0_67
        - export PATH=$JAVA_HOME/bin:$PATH
 
 ~/.bashrc:
   file.append:
     - text:
-       - export JAVA_HOME=/opt/programs/jdk1.6.0_33
+       - export JAVA_HOME=/opt/programs/jdk1.7.0_67
        - export PATH=$JAVA_HOME/bin:$PATH
 
 jdk-install:
   cmd.run:
-    - name: bash /opt/software/jdk-6u33-linux-x64.bin
+    - name: tar -zxvf /opt/software/jdk-7u67-linux-x64.tar.gz
     - cwd: /opt/programs

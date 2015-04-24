@@ -1,0 +1,3 @@
+zabbix-server:
+  pkg:
+    - installed

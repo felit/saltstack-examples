@@ -12,6 +12,12 @@ compute:
     - zookeeper
     - storm
     - kafka
+    - zabbix_server
+  '192.168.232.210':
+    - match: ipcidr
+    - zookeeper
+    - kafka
+    - storm
 output:
   '192.168.232.32':
     - match: ipcidr
