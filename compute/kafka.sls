@@ -30,6 +30,7 @@ kafka.config:
   file.managed:
     - source: salt://kafka.server.properties
     - name: /opt/programs/kafka_2.11-0.8.2.1/config/server.properties
+    - template: jinja
     - user: erp
     - group: erp
 

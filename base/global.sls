@@ -1,6 +1,7 @@
 include: 
   - jdk
   - zabbix-agent
+#  - mongodb
 
 subversion:
   pkg:
