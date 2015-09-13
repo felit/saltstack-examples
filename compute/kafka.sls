@@ -34,3 +34,10 @@ kafka.config:
     - user: erp
     - group: erp
 
+install.kafka.server:
+  file.managed:
+    - source: salt://service-kafka.sh
+    - name: /etc/init.d/kafka
+    - user: erp
+    - group: erp
+    - mode: 0744
